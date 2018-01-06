@@ -9,7 +9,6 @@ import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    private var state = true
 
     private var mRef = FirebaseDatabase.getInstance().reference
 
@@ -22,7 +21,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         switch = findViewById(R.id.switch_1)
         switch.setOnClickListener(this)
 
-        setLedValue(state)
+        setLedValue(switch.isChecked)
 
     }
 
@@ -33,8 +32,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.switch_1 -> {
-                state = !state
-                setLedValue(state)
+                setLedValue(!switch.isChecked)
             }
         }
     }
