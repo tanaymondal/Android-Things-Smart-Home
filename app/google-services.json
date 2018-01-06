@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "421731339473",
+    "firebase_url": "https://android-things-smart-hom-3b3b2.firebaseio.com",
+    "project_id": "android-things-smart-hom-3b3b2",
+    "storage_bucket": "android-things-smart-hom-3b3b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421731339473:android:99a42eea8f47115d",
+        "android_client_info": {
+          "package_name": "com.appygammy.smarthome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421731339473-trebfn384ej4fmkqjik4kh81ivm24q5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOq_ea2_lsRtOUja3W08ijLEH24FtN6Q0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
