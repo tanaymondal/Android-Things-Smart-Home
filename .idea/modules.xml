@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Android-Things-Smart-Home.iml" filepath="$PROJECT_DIR$/.idea/modules/Android-Things-Smart-Home.iml" group="Android-Things-Smart-Home" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Android-Things-Smart-Home-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Android-Things-Smart-Home-app.iml" group="Android-Things-Smart-Home/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/smarthomethings/Android-Things-Smart-Home-smarthomethings.iml" filepath="$PROJECT_DIR$/.idea/modules/smarthomethings/Android-Things-Smart-Home-smarthomethings.iml" group="Android-Things-Smart-Home/smarthomethings" />
       <module fileurl="file://$PROJECT_DIR$/AndroidThingsSmartHome.iml" filepath="$PROJECT_DIR$/AndroidThingsSmartHome.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/smarthomethings/smarthomethings.iml" filepath="$PROJECT_DIR$/smarthomethings/smarthomethings.iml" />

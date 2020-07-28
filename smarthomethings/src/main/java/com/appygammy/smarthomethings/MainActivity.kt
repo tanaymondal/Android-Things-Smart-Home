@@ -4,7 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import com.google.android.things.pio.Gpio
-import com.google.android.things.pio.PeripheralManagerService
+import com.google.android.things.pio.PeripheralManager
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -31,13 +31,13 @@ class MainActivity : Activity() {
         val ref = mRef.child("led")
 
         ref.addValueEventListener(object : ValueEventListener {
-            override fun onCancelled(p0: DatabaseError?) {
-                Log.e("TANAY", p0?.message)
+            override fun onCancelled(error: DatabaseError) {
+                Log.e("TANAY", error.message)
             }
 
-            override fun onDataChange(p0: DataSnapshot?) {
+            override fun onDataChange(snapshot: DataSnapshot) {
                 try {
-                    mLedGPIO?.value = p0?.value as Boolean
+                    mLedGPIO?.value = snapshot.value as Boolean
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }
@@ -47,7 +47,7 @@ class MainActivity : Activity() {
     }
 
     private fun initGPIO() {
-        val service = PeripheralManagerService()
+        val service = PeripheralManager.getInstance()
         try {
             mLedGPIO = service.openGpio(LED)
             mLedGPIO?.setDirection(Gpio.DIRECTION_OUT_INITIALLY_LOW)
@@ -70,6 +70,6 @@ class MainActivity : Activity() {
     }
 
     companion object {
-        private val LED = "BCM6"
+        private const val LED = "BCM6"
     }
 }
